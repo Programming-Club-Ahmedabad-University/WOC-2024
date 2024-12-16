@@ -5,7 +5,7 @@ body {
   }
   
   .app-container {
-    background-color: #0B0E19; /* Dark blue background */
+    background-color: #0f1424; /* Dark blue background */
     color: #FFFFFF; /* White text color */
     height: 100vh; /* Full viewport height */
     display: flex;
