@@ -4,8 +4,15 @@
     box-sizing: border-box;
 }
 
-.parent-container {
+/* Only for sample containers of Home, Past Events, Join Us and Contact Us Components */
+
+.containers {
+    padding-top: 110px; /* Required, to prevent content getting hidden behing Navbar */
     height: 100vh;
-    width: 100vw;
-    background-color: rgba(12, 18, 36, 1);
+}
+
+@media only screen and (max-width: 500px) {
+    .containers {
+        padding-top: 85px; /* For better view in mobile screens */
+    }
 }
