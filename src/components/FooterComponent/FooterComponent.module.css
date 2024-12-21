@@ -1,5 +1,5 @@
 .footer {
-  background-color: #0a1128; 
+  background-color: #0a1128;
   color: white;
   padding: 30px 20px;
   text-align: center;
@@ -12,11 +12,10 @@
 }
 
 .startfooter {
-  background-color: #004f64; 
+  background-color: #004f64;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
- 
 }
 
 .startfooter h2 {
@@ -28,14 +27,14 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap; 
-  max-width: 600px; 
-  margin: 0 auto; 
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .inputcontainer input {
   flex: 1;
-  min-width: 200px; 
+  min-width: 200px;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -44,7 +43,7 @@
 
 .inputcontainer button {
   padding: 10px 20px;
-  border:none;
+  border: none;
   border-radius: 5px;
   background-color: #003947;
   color: white;
@@ -59,14 +58,14 @@
 .Pages {
   font-size: 14px;
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: left;
   margin-left: 5%;
-  gap: 15px; 
+  gap: 15px;
 }
 
 .Pages a {
-  margin: 0; 
+  margin: 0;
   padding: 5px 0;
   color: white;
   text-decoration: none;
@@ -78,36 +77,37 @@
 
 .partitionLine {
   width: 100%;
-  height: 1px; 
-  background-color: rgb(108, 108, 108); 
+  height: 1px;
+  background-color: rgb(108, 108, 108);
 }
 
 .pclubfooter {
   display: flex;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-  width: 50px; 
+  width: 50px;
   height: 50px;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .clubName {
-  font-size: 24px; 
+  font-size: 24px;
   font-weight: bold;
 }
 
 .socialIcons {
   display: flex;
-  justify-content: center; 
-  gap: 15px; 
+  justify-content: center;
+  gap: 15px;
 }
 
-
 .socialIcons a {
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .socialIcons a:hover {
@@ -122,8 +122,8 @@
 @media screen and (max-width: 768px) {
   .footer {
     padding: 20px 10px;
-  margin-left: 25px;
-  margin-right: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   .startfooter {

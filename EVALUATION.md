@@ -3,11 +3,13 @@
 ### Issue bifurcations
 
 1. **Small Issues**
+
    - Quick fixes
    - Minor improvements
    - Simple bug corrections
 
 2. **Medium Issues**
+
    - Moderate feature implementations
    - More complex bug fixes
    - Requires deeper understanding
@@ -20,6 +22,7 @@
 ## Evaluation Criteria
 
 ### Factors Determining Issue Size
+
 - Complexity of the problem
 - Required technical expertise
 - Research and investigation needed
@@ -29,6 +32,7 @@
 - Documentation requirements
 
 ## Contribution Value
+
 - Focus on quality over quantity
 - Meaningful, well-thought-out contributions are prioritized
 - **Learning and collaboration are the primary goals**
