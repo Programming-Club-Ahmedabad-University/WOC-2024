@@ -1,11 +1,11 @@
 ---
 name: Bug Report
-about: "Welcome to the PClub WOC 4.0 Project! \U0001F41B\U0001F389 Thanks for helping
+about:
+  "Welcome to the PClub WOC 4.0 Project! \U0001F41B\U0001F389 Thanks for helping
   us improve!"
 title: "[Bug]: "
 labels: bug
-assignees: ''
-
+assignees: ""
 ---
 
 # Welcome to the PClub WOC 4.0 Project! 👋🎉
@@ -17,11 +17,13 @@ Thanks for taking the time to fill out this bug report.
 ### Bug Details
 
 <!-- Please delete the example contents provided to you before submitting the issue -->
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
 **Steps to Reproduce**
 Steps to reproduce the behavior:
+
 1. Go to '...'
 2. Click on '...'
 3. Scroll down to '...'

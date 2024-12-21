@@ -1,27 +1,27 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    width: 35%;
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 35%;
 }
 
-.welcomeText{
-    font-size: 23px;
-    color: white;
+.welcomeText {
+  font-size: 23px;
+  color: white;
 }
 
-.clubName{
-    font-size: 50px;
-    color: #00C8FF;
-    font-weight: 700;
+.clubName {
+  font-size: 50px;
+  color: #00c8ff;
+  font-weight: 700;
 }
 
-.text{
-    font-size: 17px;
-    color: #D2D2D2
+.text {
+  font-size: 17px;
+  color: #d2d2d2;
 }
 
-.clubDescription{
-    font-size: 17px;    
-    color: #8E8E8E;
+.clubDescription {
+  font-size: 17px;
+  color: #8e8e8e;
 }

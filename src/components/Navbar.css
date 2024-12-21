@@ -1,79 +1,78 @@
 .navbar {
-    display: flex;
-    position: fixed;
-    width: 100vw;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 .logo {
-    height: 16vh;
-    margin-left: 101px;
+  height: 16vh;
+  margin-left: 101px;
 }
 
-
 .list-container {
-    display: flex;
-    color: white;
-    list-style-type: none;
-    margin-right: 114px;
-    font-family: "Inter", sans-serif;
-    font-size: 17px;
-    font-weight: 400;
+  display: flex;
+  color: white;
+  list-style-type: none;
+  margin-right: 114px;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
 }
 
 .list-container.open {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    justify-content: space-evenly;
-    width: 100vw;
-    top: 15%;
-    left: 0;
-    border-top: 1px solid white;
-    background-color: rgba(12, 18, 36, 1);
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-evenly;
+  width: 100vw;
+  top: 15%;
+  left: 0;
+  border-top: 1px solid white;
+  background-color: rgba(12, 18, 36, 1);
 }
 
 .list-container li {
-    width: 112px;
-    align-content: center;
-    text-align: center;
+  width: 112px;
+  align-content: center;
+  text-align: center;
 }
 
 .list-container li a {
-    position: relative;
-    text-decoration: none;
-    color: grey;
-    transition: color 1s ease;
+  position: relative;
+  text-decoration: none;
+  color: grey;
+  transition: color 1s ease;
 }
 
 .list-container li a:hover {
-    color: white;
+  color: white;
 }
 
 .list-container li a::after {
-    content: '';
-    height: 2px;
-    width: 0%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    bottom: -10px;
-    background-color: white;
-    transition: width 1s ease;
+  content: "";
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -10px;
+  background-color: white;
+  transition: width 1s ease;
 }
 
 .list-container li a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .active {
-    color: white !important;  /* To highlight the active tab in navbar */
+  color: white !important; /* To highlight the active tab in navbar */
 }
 
 .bars {
-    display: none;
+  display: none;
 }
 
 /* Responsiveness */
@@ -81,75 +80,73 @@
 /* Mobile Screens */
 
 @media only screen and (max-width: 500px) {
+  .navbar {
+    padding-left: 0px;
+  }
 
-    .navbar {
-        padding-left: 0px;
-    }
+  .list-container {
+    display: none;
+  }
 
-    .list-container {
-        display: none;
-    }
+  .list-container.open {
+    top: 100%;
+  }
 
-    .list-container.open {
-        top: 100%;
-    }
+  .list-container li {
+    width: fit-content;
+    padding: 10px 0px;
+    font-size: 14px;
+    text-align: center;
+  }
 
-    .list-container li {
-        width: fit-content;
-        padding: 10px 0px;
-        font-size: 14px;
-        text-align: center;
-    }
+  .list-container li a {
+    color: white;
+  }
 
-    .list-container li a {
-        color: white;
-    }
+  .logo {
+    height: 13vh;
+    margin-left: 20px;
+  }
 
-    .logo {
-        height: 13vh;
-        margin-left: 20px;
-    }
-
-    .bars {
-        display: block;
-        height: 35px;
-        margin-right: 30px;
-    }
+  .bars {
+    display: block;
+    height: 35px;
+    margin-right: 30px;
+  }
 }
 
 /* Tablet and Laptop Screens */
 
 @media only screen and (min-width: 500px) and (max-width: 1024px) {
+  .navbar {
+    padding-left: 0px;
+  }
 
-    .navbar {
-        padding-left: 0px;
-    }
+  .list-container {
+    display: none;
+  }
 
-    .list-container {
-        display: none;
-    }
+  .list-container li {
+    width: 120px;
+    padding: 10px 5px;
+    font-size: 15px;
+  }
 
-    .list-container li {
-        width: 120px;
-        padding: 10px 5px;
-        font-size: 15px;
-    }
+  .list-container li a {
+    color: white;
+  }
 
-    .list-container li a {
-        color: white;
-    }
+  .list-container.open {
+    top: 100%;
+  }
 
-    .list-container.open {
-        top: 100%;
-    }
+  .logo {
+    margin-left: 60px;
+  }
 
-    .logo {
-        margin-left: 60px;
-    }
-
-    .bars {
-        display: block;
-        height: 45px;
-        margin-right: 60px;
-    }
+  .bars {
+    display: block;
+    height: 45px;
+    margin-right: 60px;
+  }
 }

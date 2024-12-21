@@ -1,24 +1,23 @@
-import {React, useEffect, useState} from 'react';
+import { React, useEffect, useState } from "react";
 import "../components/Navbar.css";
 // import PClub_logo from "../assets/PClub.png";
 import PClub_logo from "/public/PClub.png";
 import Bars from "../assets/menu.png";
 
 const Navbar = () => {
-
   // Managing open/close of menu
 
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-  }
+  };
 
   // To close menu on window resize if width > 1024px
 
   window.addEventListener("resize", () => {
     const windowWidth = window.innerWidth;
-    if(windowWidth > 1024 && menuOpen == true) {
+    if (windowWidth > 1024 && menuOpen == true) {
       setMenuOpen(false);
     }
   });
@@ -41,7 +40,8 @@ const Navbar = () => {
     const sections = document.querySelectorAll("section");
     window.addEventListener("scroll", () => {
       sections.forEach((section) => {
-        if(window.scrollY >= section.offsetTop - 350) {   // Value can be adjusted
+        if (window.scrollY >= section.offsetTop - 350) {
+          // Value can be adjusted
           setActiveLink(`#${section.id}`);
         }
       });
@@ -49,49 +49,49 @@ const Navbar = () => {
   });
 
   return (
-    <nav className='navbar'>
-        <img src={PClub_logo} alt="PClub Logo" className='logo'/>
-        <ul className={`list-container ${menuOpen ? 'open' : ''}`}>
-            <li>
-              <a 
-              href="#home" 
-              className={activeLink === "#home" ? 'active' : ''}
-              onClick={() => setActiveLink("#home")}
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a 
-              href="#past-events" 
-              className={activeLink === "#past-events" ? 'active' : ''}
-              onClick={() => setActiveLink("#past-events")}
-              >
-                Past Events
-              </a>
-            </li>
-            <li>
-              <a 
-              href="#join-us" 
-              className={activeLink === "#join-us" ? 'active' : ''}
-              onClick={() => setActiveLink("#join-us")}
-              >
-                Join Us
-              </a>
-            </li>
-            <li>
-              <a
-              href="#contact-us" 
-              className={activeLink === "#contact-us" ? 'active' : ''}
-              onClick={() => setActiveLink("#contact-us")}
-              >
-                Contact Us
-              </a>
-            </li>
-        </ul>
-        <img src={Bars} alt="Menu Bars" className='bars' onClick={toggleMenu}/>
+    <nav className="navbar">
+      <img src={PClub_logo} alt="PClub Logo" className="logo" />
+      <ul className={`list-container ${menuOpen ? "open" : ""}`}>
+        <li>
+          <a
+            href="#home"
+            className={activeLink === "#home" ? "active" : ""}
+            onClick={() => setActiveLink("#home")}
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="#past-events"
+            className={activeLink === "#past-events" ? "active" : ""}
+            onClick={() => setActiveLink("#past-events")}
+          >
+            Past Events
+          </a>
+        </li>
+        <li>
+          <a
+            href="#join-us"
+            className={activeLink === "#join-us" ? "active" : ""}
+            onClick={() => setActiveLink("#join-us")}
+          >
+            Join Us
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact-us"
+            className={activeLink === "#contact-us" ? "active" : ""}
+            onClick={() => setActiveLink("#contact-us")}
+          >
+            Contact Us
+          </a>
+        </li>
+      </ul>
+      <img src={Bars} alt="Menu Bars" className="bars" onClick={toggleMenu} />
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
