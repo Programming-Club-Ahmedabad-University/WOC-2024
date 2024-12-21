@@ -3,6 +3,7 @@
 ## 🤝 Our Commitment
 
 Winter of Code 4.0 is a learning journey, not a competition. Our primary goals are:
+
 - Collaborative learning
 - Skill development
 - Building community
@@ -11,30 +12,35 @@ Winter of Code 4.0 is a learning journey, not a competition. Our primary goals a
 ## 📕 Contribution Guidelines
 
 ### 1. Collaboration First
+
 - This is a collaborative learning experience
 - Help and support your fellow contributors
 - Share knowledge generously
 - Respect everyone's learning pace
 
 ### 2. Contribution Etiquette
+
 - Do not spam Pull Requests
 - If an issue is assigned to someone, do not submit a competing PR
 - Communicate openly if you're interested in an issue
 - Wait for maintainer assignment before starting work
 
 ### 3. Respect and Inclusivity
+
 - Be kind and constructive
 - Welcome all skill levels
 - Provide helpful, positive feedback
 - No harassment or discriminatory behavior
 
 ### 4. Learning Mindset
+
 - Focus on learning, not just completing tasks
 - Ask questions when unsure
 - Be open to feedback and suggestions
 - Celebrate everyone's progress
 
 ## 🚫 Unacceptable Behavior
+
 - Submitting low-quality or duplicate PRs
 - Attempting to game the system
 - Violating the spirit of collaborative learning

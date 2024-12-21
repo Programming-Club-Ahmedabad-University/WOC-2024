@@ -19,30 +19,33 @@ Before setting up the project, ensure you have the following installed on your s
 0. **Fork the repository**
 
    - In this repository, on the top-right side you can see an option to **fork**.
-   - Once done, a *copy* of this repository will be created in your github account
+   - Once done, a _copy_ of this repository will be created in your github account
 
-2. **Clone the Repository**
+1. **Clone the Repository**
 
    First, clone the repository to your local machine using Git:
+
    ```bash
    git clone https://github.com/Your-Username/WOC-2024.git
    ```
 
    Replace `Your-Username` with your github username.
 
-3. **Move to project directory**
+2. **Move to project directory**
 
    ```bash
    cd WOC-2024
    ```
-4. **Install Dependencies**
+
+3. **Install Dependencies**
 
    Install the required dependencies using npm:
+
    ```bash
    npm install
    ```
 
-5. **Run the development server**
+4. **Run the development server**
 
    ```bash
    npm run dev
@@ -50,7 +53,7 @@ Before setting up the project, ensure you have the following installed on your s
 
    This will start the Vite development server, and you can view the project in your browser at `http://localhost:5173`.
 
-If you are looking forward to contributing, please create a new *branch* before making any changes. Learn more about it from [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
+If you are looking forward to contributing, please create a new _branch_ before making any changes. Learn more about it from [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
 
 5. Create a new branch
 
@@ -65,7 +68,7 @@ If you are looking forward to contributing, please create a new *branch* before 
      ```
 
 You are all set now to make your changes. If there are any problem, feel free to contact us.
-   
+
 6. Add your changes
 
    ```bash
@@ -77,7 +80,6 @@ You are all set now to make your changes. If there are any problem, feel free to
      ```bash
      git add App.jsx App.css
      ```
-
 
 7. Commit your changes
 
@@ -99,4 +101,3 @@ Once you push the changes to your **cloned repository**, the Compare & pull requ
 ---
 
 We are looking forward to review your changes and hope you learn something new during this.
-   
