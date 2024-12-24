@@ -1,9 +1,9 @@
 name: Lint Check
 on:
-  pull_request:
+  push:
     branches:
       - main
-  push:
+  pull_request:
     branches:
       - main
 
