@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import { React, useEffect, useState } from "react";
+=======
+import {React ,useEffect, useState} from 'react';
+>>>>>>> 67d955ca81080bb6a770bf6ecd89abc913c8c6f9
 import "../components/Navbar.css";
 // import PClub_logo from "../assets/PClub.png";
 import PClub_logo from "/public/PClub.png";
 import Bars from "../assets/menu.png";
+import { Link } from 'react-router';
 
 const Navbar = () => {
   // Managing open/close of menu
@@ -35,7 +40,7 @@ const Navbar = () => {
 
   // Managing active link
 
-  const [activeLink, setActiveLink] = useState("#home");
+  const [activeLink, setActiveLink] = useState("/");
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     window.addEventListener("scroll", () => {

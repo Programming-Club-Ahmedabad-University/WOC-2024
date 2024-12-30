@@ -144,9 +144,21 @@
     margin-left: 60px;
   }
 
+<<<<<<< HEAD
   .bars {
     display: block;
     height: 45px;
     margin-right: 60px;
   }
+=======
+    .logo {
+        margin-left: 60px;
+    }
+
+    .bars {
+        display: block;
+        height: 45px;
+        margin-right: 60px;
+    }
+>>>>>>> 67d955ca81080bb6a770bf6ecd89abc913c8c6f9
 }
