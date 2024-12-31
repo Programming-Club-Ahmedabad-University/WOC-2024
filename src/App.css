@@ -1,6 +1,18 @@
 * {
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: rgba(12, 18, 36, 1);
 }
+=======
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    background-color: rgba(12, 18, 36, 1);
+    height: 100vh;
+}
+>>>>>>> 67d955ca81080bb6a770bf6ecd89abc913c8c6f9

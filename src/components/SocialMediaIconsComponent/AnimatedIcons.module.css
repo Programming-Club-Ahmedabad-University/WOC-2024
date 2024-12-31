@@ -1,0 +1,111 @@
+.container {
+    border-radius: 50%;
+    position: relative;
+    height: 800px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    background-color: #004457;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+}
+
+.orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 0.5px dashed #00C8FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#firstOrbit {
+    width: 239px;
+    height: 239px;
+}
+
+#secondOrbit {
+    width: 457px;
+    height: 457px;
+}
+
+#thirdOrbit {
+    width: 683px;
+    height: 683px;
+}
+
+
+.iconsContainer {
+    width: 100px;
+    height: 100px;
+    background-color: #00575B;
+    border-radius: 50%;
+    position: absolute;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wpContainer, #instaContainer, #linkedInContainer {
+    animation: iconsRotation1 var(--animation-duration, 10s) linear infinite;
+}
+
+#mailContainer {
+    animation: iconsRotation2 var(--animation-duration, 10s) linear infinite;
+}
+
+#wpContainer {
+    --translate-x: 110px;
+    --start-rotate: 0deg;
+    --end-rotate: -360deg;
+    --animation-duration: 10s;
+}
+
+#instaContainer {
+    --translate-x: 220px;
+    --start-rotate: 0deg;
+    --end-rotate: -360deg;
+    --animation-duration: 14s;
+}
+
+#linkedInContainer {
+    --translate-x: 339px;
+    --start-rotate: 0deg;
+    --end-rotate: -360deg;
+    --animation-duration: 18s;
+}
+
+#mailContainer {
+    --translate-x: 339px;
+    --start-rotate: 180deg;
+    --start-rotate-tilt: -180deg;
+    --end-rotate: 540deg;
+    --end-rotate-tilt: -540deg;
+    --animation-duration: 18s;
+}
+
+@keyframes iconsRotation1 {
+    0% {
+        transform: rotate(var(--start-rotate)) translateX(var(--translate-x)) rotate(var(--start-rotate));
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(var(--translate-x)) rotate(var(--end-rotate));
+    }
+}
+
+@keyframes iconsRotation2 {
+    0% {
+        transform: rotate(var(--start-rotate)) translateX(var(--translate-x)) rotate(var(--start-rotate-tilt));
+    }
+
+    100% {
+        transform: rotate(var(--end-rotate)) translateX(var(--translate-x)) rotate(var(--end-rotate-tilt));
+    }
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome to the PClub WOC 4.0 Project! 👋🎉
 
 Thanks for taking the time to fill out this Pull Request Template.
@@ -10,6 +11,8 @@ Give an appropriate and relevant title to your Pull Request [PR].
 
 ---
 
+=======
+>>>>>>> 67d955ca81080bb6a770bf6ecd89abc913c8c6f9
 ## Related Issue
 
 Solves/Resolves/Fixes #[Issue Number].
@@ -31,6 +34,8 @@ Please ensure the following before submitting the PR:
 
 - [ ] I have read the `CODE_OF_CONDUCT.md` file and followed it's guidlines.
 - [ ] I have followed the design specified in the Figma file (if applicable).
+
+<!-- You can check the box like this: [x] -->
 
 ---
 

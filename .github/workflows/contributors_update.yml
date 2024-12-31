@@ -1,0 +1,72 @@
+name: Update Contributors in README
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Fetch Contributors and Update README
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # repository name
+          REPO_NAME="Programming-Club-Ahmedabad-University/WOC-2024"
+
+          README_PATH="README.md"
+
+          # Fetch contributors 
+            CONTRIBUTORS=$(curl -H "Authorization: Bearer $GH_TOKEN" -s \
+            "https://api.github.com/repos/${REPO_NAME}/contributors?per_page=10" | \
+            jq -r '.[] | select(.login != "github-actions[bot]") | "<p style=\"display: flex; align-items: center; margin-bottom: 8px;\">\n  <img src=\"\(.avatar_url)\" alt=\"avatar\" style=\"width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;\" />\n  <a href=\"https://github.com/\(.login)\" style=\"font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;\">@\(.login)</a>\n</p>"')
+
+
+          if [ -z "$CONTRIBUTORS" ]; then
+            echo "No contributors found. Exiting."
+            exit 1
+          fi
+
+          # Print the fetched contributors
+          echo "Fetched Contributors:"
+          echo "$CONTRIBUTORS"
+
+          LAST_UPDATED=$(TZ='Asia/Kolkata' date '+%Y-%m-%d %I:%M:%S %p IST')
+
+          # Prepare new contributors section
+          CONTRIBUTORS_SECTION="## 🎉 Big Thanks to Amazing Contributors\n\n"
+          CONTRIBUTORS_SECTION+="${CONTRIBUTORS}\n\n"
+          CONTRIBUTORS_SECTION+="<p><i>Last updated: ${LAST_UPDATED}</i></p>\n"
+
+          # Debug the section before updating README
+          echo "Updating README with the following content:"
+          echo -e "$CONTRIBUTORS_SECTION"
+
+          # Use awk to replace or append the new contributors section
+          awk -v block="$CONTRIBUTORS_SECTION" '
+          BEGIN { start = 0 }
+            /## 🎉 Big Thanks to Amazing Contributors/ { start = 1; print block; next }
+            /<!-- END -->/ { start = 0 }
+            !start { print }
+          ' "$README_PATH" > README.tmp && mv README.tmp "$README_PATH"
+
+          # Commit and push changes if README is modified
+          if ! git diff --exit-code "$README_PATH"; then
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add "$README_PATH"
+            git commit -m "Update contributors section in README.md"
+            git push
+          else
+            echo "No changes detected in README.md"
+          fi
